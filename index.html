@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive journal layout demonstrating the CSS box model, floats, clearfix, and media queries.">
+    <title>Henry's Journal | CSS Positioning Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <header id="header-box">
+            <p class="eyebrow">CSS Positioning Project</p>
+            <h1>Henry's Journal</h1>
+            <p class="tagline">Thoughts, memories, and moments worth keeping</p>
+        </header>
+
+        <aside id="sidebar" aria-labelledby="friends-heading">
+            <h2 id="friends-heading">Friends</h2>
+            <nav aria-label="Friends list">
+                <ul class="friends-list">
+                    <li><a href="#campus-entry">Campus Explorer</a></li>
+                    <li><a href="#study-entry">Study Partner</a></li>
+                    <li><a href="#weekend-entry">Weekend Crew</a></li>
+                    <li><a href="#reflection">Future Me</a></li>
+                </ul>
+            </nav>
+
+            <section class="sidebar-note" aria-labelledby="about-heading">
+                <h2 id="about-heading">About This Page</h2>
+                <p>This journal demonstrates the box model, a two-column float layout, clearfix, and responsive design.</p>
+            </section>
+        </aside>
+
+        <main id="content-area">
+            <article class="journal-entry" id="campus-entry">
+                <img
+                    class="entry-image"
+                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20160'%3E%3Crect%20width='220'%20height='160'%20fill='%23dbeafe'/%3E%3Ccircle%20cx='178'%20cy='34'%20r='19'%20fill='%23fbbf24'/%3E%3Cpath%20d='M0%20112L52%2060l38%2037%2030-29%20100%2092H0z'%20fill='%2360a5fa'/%3E%3Cpath%20d='M0%20132l57-48%2037%2031%2034-29%2092%2074H0z'%20fill='%232563eb'/%3E%3Crect%20x='78'%20y='106'%20width='64'%20height='38'%20rx='3'%20fill='%23f8fafc'/%3E%3Cpath%20d='M70%20106l40-27%2040%2027z'%20fill='%231e3a8a'/%3E%3Crect%20x='103'%20y='120'%20width='14'%20height='24'%20fill='%237c3aed'/%3E%3C/svg%3E"
+                    alt="Illustration of a university building beneath blue hills"
+                    width="220"
+                    height="160">
+                <div class="entry-text">
+                    <p class="entry-date"><time datetime="2026-09-14">September 14, 2026</time></p>
+                    <h2 class="entry-title">A Fresh Start on Campus</h2>
+                    <p>Today was a reminder that a new semester is more than a schedule of classes. It is a chance to meet new people, learn unfamiliar ideas, and build better habits one day at a time.</p>
+                    <p>I walked across campus with a full list of tasks, but I also made time to notice the small things: the busy walkways, the quiet study spaces, and the feeling that every week can bring progress.</p>
+                </div>
+            </article>
+
+            <article class="journal-entry" id="study-entry">
+                <img
+                    class="entry-image"
+                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20160'%3E%3Crect%20width='220'%20height='160'%20fill='%23ede9fe'/%3E%3Crect%20x='24'%20y='30'%20width='172'%20height='104'%20rx='9'%20fill='%23ffffff'/%3E%3Cpath%20d='M45%2052h58v65H45z'%20fill='%23c4b5fd'/%3E%3Cpath%20d='M117%2052h58v65h-58z'%20fill='%2393c5fd'/%3E%3Cpath%20d='M110%2047v76'%20stroke='%231e3a8a'%20stroke-width='5'/%3E%3Cpath%20d='M55%2067h38M55%2080h38M127%2067h38M127%2080h38'%20stroke='%23ffffff'%20stroke-width='5'%20stroke-linecap='round'/%3E%3Ccircle%20cx='170'%20cy='28'%20r='13'%20fill='%23fbbf24'/%3E%3C/svg%3E"
+                    alt="Illustration of an open study book"
+                    width="220"
+                    height="160">
+                <div class="entry-text">
+                    <p class="entry-date"><time datetime="2026-09-15">September 15, 2026</time></p>
+                    <h2 class="entry-title">Learning by Building</h2>
+                    <p>CSS became much clearer when I stopped thinking of every element as text and started seeing it as a box. Content sits inside padding, borders surround that padding, and margins create space outside the border.</p>
+                    <p>The two-column layout also showed why clearfix matters. The sidebar and content area float beside each other, while the clearfix allows their parent container to keep its full height.</p>
+                </div>
+            </article>
+
+            <article class="journal-entry" id="weekend-entry">
+                <img
+                    class="entry-image"
+                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20160'%3E%3Crect%20width='220'%20height='160'%20fill='%23dcfce7'/%3E%3Ccircle%20cx='175'%20cy='38'%20r='20'%20fill='%23fbbf24'/%3E%3Cpath%20d='M0%20115c32-18%2056-18%2086%200s55%2018%2084%200%2038-18%2050-10v55H0z'%20fill='%234ade80'/%3E%3Cpath%20d='M0%20133c31-14%2058-14%2088%200s58%2014%2088%200%2035-10%2044-6v33H0z'%20fill='%2316a34a'/%3E%3Cpath%20d='M35%20105l20-45%2020%2045zM92%20107l24-54%2024%2054zM148%20108l18-41%2018%2041z'%20fill='%23166534'/%3E%3C/svg%3E"
+                    alt="Illustration of green trees and rolling hills"
+                    width="220"
+                    height="160">
+                <div class="entry-text">
+                    <p class="entry-date"><time datetime="2026-09-16">September 16, 2026</time></p>
+                    <h2 class="entry-title">Making Space to Recharge</h2>
+                    <p>A productive week needs moments of rest. A short walk, a conversation with friends, or an hour away from a screen can make it easier to return to work with patience and focus.</p>
+                    <p id="reflection">My goal for the coming week is simple: stay consistent, ask questions early, and measure progress by what I understand—not only by how quickly I finish.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer id="footer-box">
+            <p>Created by Nirupamarayudu Chitturi</p>
+            <p>Panther ID: 002931435</p>
+        </footer>
+    </div>
+</body>
+</html>
